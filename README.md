@@ -23,6 +23,8 @@ Kit](http://developers.google.com/glass/develop/gdk/index).
 If you are getting an unknown error on com.google.* check that the Project->Properties
 are set to use the "Glass Development Kit".
 
+Open Eclipse/ADT and build the project to your Glass. 
+
 Usage
 -----
 

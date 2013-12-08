@@ -3,6 +3,8 @@ GlassGetBitcoinPrice
 
 GlassGetBicoinPrice (GGBP) is a simple Glass application to get the current Bitcoin trading price in dollars. 
 
+![image](https://dl-web.dropbox.com/get/20131208_173602_647_x.jpg?w=AADpGn4vz01ZcL_3LoDjkjo-MYLvSs2T09CeuSNVRri4JQ)
+
 Introduction
 ------------
 

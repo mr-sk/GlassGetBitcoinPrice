@@ -6,7 +6,12 @@ GlassGetBicoinPrice (GGBP) is a simple Glass application to get the current Bitc
 Introduction
 ------------
 
+GGBP is a very simple Glass application that responds to a single voice trigger. It will fetch the
+exchange rates from Coinbase.com using a GET request and extract the "btc_to_usd" value. 
 
+The request is executed in an asynchronous thread and when complete executes a preset callback
+which updates the prices and utilizes the Text-To-Speech (TTS) capabilies of Glass to read
+the price to the user. 
 
 Installation
 ------------
@@ -18,7 +23,6 @@ Kit](http://developers.google.com/glass/develop/gdk/index).
 If you are getting an unknown error on com.google.* check that the Project->Properties
 are set to use the "Glass Development Kit".
 
-
 Usage
 -----
 
@@ -26,4 +30,11 @@ GGBP uses GDK voice triggers. Supported commands are:
 
 * `get bitcoin price`
 
+Thanks
+------
 
+I didn't get this far on my own and I want to give thanks to the following for help and code samples:
+* Glass Community
+* StackOverflow
+* https://github.com/azharb/
+* https://github.com/ayshen

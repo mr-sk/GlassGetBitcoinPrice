@@ -10,27 +10,27 @@ import android.os.IBinder;
  */
 public class okglassgbp extends Service {
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
-	}
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
 
-	@Override
-	public int onStartCommand(Intent intent, int flags, int startId) {
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
 
-		Intent dialogIntent = new Intent(getBaseContext(), kar.class);
-		dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		getApplication().startActivity(dialogIntent);
+        Intent dialogIntent = new Intent(getBaseContext(), kar.class);
+        dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getApplication().startActivity(dialogIntent);
 
-		return super.onStartCommand(intent, flags, startId);
-	}
+        return super.onStartCommand(intent, flags, startId);
+    }
 
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-	}
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 
-	public IBinder onBind(Intent intent) {
-		return null;
-	}
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
 }

@@ -9,5 +9,5 @@ package com.kar.GlassBTCPrice;
  * call backs from other threads. 
  */
 interface AsyncTaskCompleteListener<T> {
-	public void onTaskComplete(T result);
+    public void onTaskComplete(T result);
 }

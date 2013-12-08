@@ -50,6 +50,7 @@ public class kar extends Activity implements TextToSpeech.OnInitListener, AsyncT
 
         Card card1 = new Card(getApplicationContext());
         card1.setText("Fetching bitcoin price");
+        card1.setInfo("Source: coinbase.com");
         View card1View = card1.toView();
 
         setContentView(card1View);
@@ -94,7 +95,7 @@ public class kar extends Activity implements TextToSpeech.OnInitListener, AsyncT
 
         // Place a new card in the view
         Card card1 = new Card(getApplicationContext());
-        card1.setText("$" + price);
+        card1.setText("1x Bitcoin = $" + price);
         View card1View = card1.toView();
         setContentView(card1View);
 

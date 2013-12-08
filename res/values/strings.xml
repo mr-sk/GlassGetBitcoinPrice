@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">btcprice</string>
+    <string name="btcprice_voice_trigger">Get bitcoin price</string>
+</resources>

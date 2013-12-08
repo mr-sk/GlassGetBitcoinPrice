@@ -25,7 +25,7 @@ import android.os.AsyncTask;
  */
 public class RestAsync<Result> extends AsyncTask<Object, Object, Object> {
 	private AsyncTaskCompleteListener<String> callback;
-	
+
 	/**
 	 * Class constructor sets the callback to use when our async operation is complete. 
 	 * 
@@ -46,20 +46,20 @@ public class RestAsync<Result> extends AsyncTask<Object, Object, Object> {
 	@Override
 	protected Object doInBackground(Object... arg0) {	
 
-	    DefaultHttpClient httpClient = new DefaultHttpClient();
-        HttpGet request = new HttpGet(
-        		"https://coinbase.com/api/v1/currencies/exchange_rates");
-        request.addHeader("accept", "application/json");
+		DefaultHttpClient httpClient = new DefaultHttpClient();
+		HttpGet request = new HttpGet(
+				"https://coinbase.com/api/v1/currencies/exchange_rates");
+		request.addHeader("accept", "application/json");
 
 		String price = new String();
-        
-        try {
+
+		try {
 			HttpResponse response = httpClient.execute(request);
-            String result = EntityUtils.toString(response.getEntity());
-            JSONObject jo = new JSONObject(result);	
-            price = jo.getString("btc_to_usd");
-     
-        } catch (ClientProtocolException e) {
+			String result = EntityUtils.toString(response.getEntity());
+			JSONObject jo = new JSONObject(result);	
+			price = jo.getString("btc_to_usd");
+
+		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -69,10 +69,10 @@ public class RestAsync<Result> extends AsyncTask<Object, Object, Object> {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return price;
 	}
-	
+
 	@Override
 	/**
 	 * Executes the callback method, sending the data back to the main thread. 
@@ -80,6 +80,6 @@ public class RestAsync<Result> extends AsyncTask<Object, Object, Object> {
 	 * @param result The result of the doInBackground() operation
 	 */
 	protected void onPostExecute (Object result) {		
-	    callback.onTaskComplete((String) result);
+		callback.onTaskComplete((String) result);
 	}
 }
